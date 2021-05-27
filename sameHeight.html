@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>三つのメリット（flexboxの練習）</title>
+    <style>
+      .wrap {
+        /* flexboxを使う */
+        display: flex;
+        /*  中身を横並びにする。 */
+        flex-direction: row;
+      }
+      .box1 {
+        /* flexboxを使う */
+        display: flex;
+        /*  中身を縦並びにする。 */
+        flex-direction: column;
+        /*  下から配置する。  */
+        justify-content: flex-end;
+
+        border: solid 1px #000;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
+      }
+
+      .content1 {
+        /* これを指定すると、flexboxの中で伸びる。中身を下から配置してbox1の上の部分が余ることがない。 */
+        flex: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='wrap'>
+      <div class='box1'>
+        <div class='content1'>
+          <p>あああ</p>
+        </div>
+        <img src='/graph.png' />
+      </div>
+
+      <div class='box1'>
+        <div class='content1'>
+          <p>あああ</p>
+          <p>いいい</p>
+        </div>
+        <img src='/graph.png' />
+      </div>
+
+      <div class='box1'>
+        <div class='content1'>
+          <p>あああ</p>
+          <p>いいい</p>
+          <p>ううう</p>
+        </div>
+        <img src='/graph.png' />
+      </div>
+    </div>
